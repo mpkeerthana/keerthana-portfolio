@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { BookOpen, Award, GraduationCap } from 'lucide-react';
+import { BookOpen, Award, GraduationCap, ExternalLink } from 'lucide-react';
 
 const Education = () => (
   <motion.section id="education" initial={{ opacity: 0, y: 32 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.75 }} className="space-y-8">
@@ -29,7 +29,20 @@ const Education = () => (
             <h3 className="text-lg font-semibold text-white">Certifications</h3>
           </div>
           <ul className="mt-4 space-y-3 text-sm text-slate-300">
-            <li className="rounded-3xl border border-white/10 bg-slate-900/70 p-4">NASSCOM Digital 101 – 30 hours</li>
+            <li>
+              <a
+                href="/nasscom-certificate.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-between rounded-3xl border border-white/10 bg-slate-900/70 p-4 transition-all duration-300 hover:border-violet-500/50 hover:bg-slate-900/90 hover:shadow-lg hover:shadow-violet-500/5"
+              >
+                <span className="font-medium text-white transition-colors group-hover:text-violet-300">NASSCOM Digital 101 – 30 hours</span>
+                <span className="flex items-center gap-1.5 text-xs text-violet-400 opacity-80 transition-all group-hover:opacity-100 group-hover:text-violet-300">
+                  View
+                  <ExternalLink size={14} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </span>
+              </a>
+            </li>
           </ul>
         </div>
         <div className="glass-card rounded-[32px] p-6">
